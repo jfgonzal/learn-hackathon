@@ -40,7 +40,7 @@ class CreateCompanyMetasTable extends Migration
             $table->boolean('other')->default(false);
             $table->string('other_info')->default(false);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at');
         });
     }
 

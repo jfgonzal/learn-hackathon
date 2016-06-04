@@ -20,7 +20,7 @@ class CreateCompanyMetricsTable extends Migration
             $table->integer('satisfaction')->nullable();
             $table->integer('employee_count')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at');
         });
     }
 
