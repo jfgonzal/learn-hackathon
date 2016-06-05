@@ -20,7 +20,7 @@ class CreateCompanyAddressesTable extends Migration
             $table->string('city')->nullable();;
             $table->string('state')->nullable();
             $table->string('zip')->nullable();
-            $table->string('country')->nullable();
+            $table->string('country')->default('us');
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at');
         });
@@ -33,6 +33,6 @@ class CreateCompanyAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_addresses');
+        Schema::drop('company_address');
     }
 }

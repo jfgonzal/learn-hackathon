@@ -29,6 +29,6 @@ class CreateCompanyPhonesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_phones');
+        Schema::drop('company_phone');
     }
 }

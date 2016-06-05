@@ -15,8 +15,7 @@ class CreateCompanyMetasTable extends Migration
         Schema::create('company_meta', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_id');
-            $table->boolean('need')->default(false);
-            $table->boolean('has')->default(false);
+            $table->string('type')->default('need');
             $table->boolean('continuing_education')->default(false);
             $table->boolean('government_contracting')->default(false);
             $table->boolean('importing_exporting')->default(false);
@@ -38,7 +37,7 @@ class CreateCompanyMetasTable extends Migration
             $table->boolean('permitting')->default(false);
             $table->boolean('succession_planning')->default(false);
             $table->boolean('other')->default(false);
-            $table->string('other_info')->default(false);
+            $table->string('other_text')->default(false);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at');
         });
@@ -51,6 +50,6 @@ class CreateCompanyMetasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_metas');
+        Schema::drop('company_meta');
     }
 }

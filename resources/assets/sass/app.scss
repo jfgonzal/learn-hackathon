@@ -1,2 +1,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+body{
+  padding-top: 70px;
+}
+
+menu, ol, ul, li {
+  padding: 0;
+  list-style: none;
+}

@@ -1,23 +1,27 @@
 <!-- resources/views/auth/login.blade.php -->
+@extends('layout')
+@section('content')
+@include('errors')
+<div class="col-md-6 col-md-offset-3">
+    <form method="POST" action="/auth/login">
+        {!! csrf_field() !!}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}">
+        </div>
 
-<form method="POST" action="/auth/login">
-    {!! csrf_field() !!}
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password" id="password">
+        </div>
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
-    </div>
+        <div class="form-group">
+            <input type="checkbox" name="remember"> Remember Me
+        </div>
 
-    <div>
-        Password
-        <input type="password" name="password" id="password">
-    </div>
-
-    <div>
-        <input type="checkbox" name="remember"> Remember Me
-    </div>
-
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Login</button>
+        </div>
+    </form>
+</div>
+@stop
