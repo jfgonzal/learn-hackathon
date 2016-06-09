@@ -21,15 +21,15 @@ class UserTableSeeder extends Seeder
 
         $userData = [
                     ['type' => 'company', 'first_name' => 'John', 'last_name' => 'Doe', 'phone' => $faker->phoneNumber,
-                        'email' => 'john@example.com','preferred_contact' => 'email','password' => Crypt::encrypt('password')],
+                        'email' => 'john@example.com','preferred_contact' => 'email','password' => bcrypt('password')],
                     ['type' => 'company', 'first_name' => 'Jane', 'last_name' => 'Doe', 'phone' => $faker->phoneNumber,
-                        'email' => 'jane@example.com','preferred_contact' => 'email','password' => Crypt::encrypt('password')],
+                        'email' => 'jane@example.com','preferred_contact' => 'email','password' => bcrypt('password')],
                     ['type' => 'company', 'first_name' => 'Janice', 'last_name' => 'Doe', 'phone' => $faker->phoneNumber,
-                        'email' => 'janice@example.com','preferred_contact' => 'phone','password' => Crypt::encrypt('password')],
+                        'email' => 'janice@example.com','preferred_contact' => 'phone','password' => bcrypt('password')],
                     ['type' => 'company', 'first_name' => 'Jerry', 'last_name' => 'Doe', 'phone' => $faker->phoneNumber,
-                        'email' => 'jerry@example.com','preferred_contact' => 'email','password' => Crypt::encrypt('password')],
+                        'email' => 'jerry@example.com','preferred_contact' => 'email','password' => bcrypt('password')],
                     ['type' => 'company', 'first_name' => 'Jenni', 'last_name' => 'Doe', 'phone' => $faker->phoneNumber,
-                        'email' => 'jenni@example.com','preferred_contact' => 'both','password' => Crypt::encrypt('password')]
+                        'email' => 'jenni@example.com','preferred_contact' => 'both','password' => bcrypt('password')]
                     ];
 
         $companyData = [
@@ -179,9 +179,9 @@ class UserTableSeeder extends Seeder
 
         $userAdminData = [
             ['type' => 'admin', 'first_name' => 'Fernando', 'last_name' => 'Gonzales Del Valle', 'phone' => 2396015898,
-                'email' => 'jfgonzal@eagle.fgcu.edu','preferred_contact' => 'email','password' => Crypt::encrypt('password')],
+                'email' => 'jfgonzal@eagle.fgcu.edu','preferred_contact' => 'email','password' => bcrypt('password')],
             ['type' => 'admin', 'first_name' => 'Brian', 'last_name' => 'Paxson', 'phone' => $faker->phoneNumber,
-                'email' => 'bpaxson62@gmail.com','preferred_contact' => 'email','password' => Crypt::encrypt('password')]
+                'email' => 'bpaxson62@gmail.com','preferred_contact' => 'email','password' => bcrypt('password')]
         ];
 
         $adminData = [

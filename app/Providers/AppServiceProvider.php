@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Blade::directive('dd', function($argument){
+            return "<?php dd($argument) ?>";
+        });
+
+        Blade::directive('dump', function($argument){
+            return "<?php dump($argument) ?>";
+        });
     }
 }

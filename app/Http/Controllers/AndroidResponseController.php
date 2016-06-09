@@ -5,19 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 class AndroidResponseController extends Controller
 {
     /**
      * Responds to requests to GET /users/show/1
      */
-    public function getLogin($login, $password)
+    public function getLogin(checkoutRequest $data)
     {
 
-        $data = json_encode([['login' => $login],['password' => $password]]);
+//        $data = json_encode([['login' => $login],['password' => $password]]);
 
+        echo $data;
+        
         DB::table('snapper')->insert([
-            'request' => $data,
+            'request' => 'hello',
             'type' => 'login-attempt'
         ]);
         

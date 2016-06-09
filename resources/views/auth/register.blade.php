@@ -69,11 +69,14 @@
             <hr>
         <div class="col-md-12">
                 <h3><b>What is your preferred contact method?</b></h3>
-                <input type="radio" name="contact" value="email-contact" checked> Email<br>
-                <input type="radio" name="contact" value="phone-contact"> Phone<br>
-                <input type="radio" name="contact" value="both-contact"> Both
+                <input type="radio" name="preferred_contact" value="email" checked> Email<br>
+                <input type="radio" name="preferred_contact" value="phone"> Phone<br>
+                <input type="radio" name="preferred_contact" value="both"> Both
         </div>
-        <div class="col-md-12"></div>
+        <div class="row-md-6 col-md-6">
+            <input type="password" name="password" class="form-control" id="password" value="{{ old('password') }}" required>
+            <label for="password">Password</label>
+        </div>
         <div class="col-md-12">
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Register</button>

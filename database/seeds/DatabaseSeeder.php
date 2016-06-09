@@ -23,8 +23,9 @@ class DatabaseSeeder extends Seeder
             DB::table($table)->truncate();
         }
 
+        $this->call('CommentTableSeeder');
         $this->call('UserTableSeeder');
-
+        $this->command->info('All tables have been seeder');
         Model::reguard();
     }
 }
